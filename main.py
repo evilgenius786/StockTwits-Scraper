@@ -1,4 +1,5 @@
 import threading
+from random import randint
 
 import json
 import os.path
@@ -76,6 +77,7 @@ def main():
 
 
 def getJson(url):
+    time.sleep(randint(1, 5))
     return requests.get(url, proxies=proxy).json()
 
 
